@@ -6,13 +6,13 @@ from core import models
 
 
 class UserAdmin(BaseUserAdmin):
-    ordering=['id']
-    list_display=['name', 'email']
+    ordering = ['id']
+    list_display = ['name', 'email']
     fieldsets = (
         (None, {'fields': ('email', 'password')}),
         (_('Personal Info'), {'fields': ('name',)}),
         (
-            _('Permissions'), 
+            _('Permissions'),
             {'fields': ('is_active', 'is_staff', 'is_superuser')}
         ),
         (_('Important Dates'), {'fields': ('last_login',)})
@@ -23,6 +23,7 @@ class UserAdmin(BaseUserAdmin):
             'fields': ('email', 'password1', 'password2')
         }),
     )
+
 
 """ register custom model class for user admin """
 admin.site.register(models.User, UserAdmin)

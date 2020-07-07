@@ -18,7 +18,7 @@ class AdminSiteTests(TestCase):
 
         self.user = get_user_model().objects.create_user(
             email='test@gmail.com',
-            password = 'pass123',
+            password='pass123',
             name='User Test'
         )
 

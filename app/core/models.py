@@ -29,7 +29,6 @@ class UserManager(BaseUserManager):
         return user
 
 
-
 class User(AbstractBaseUser, PermissionsMixin):
     """ custom user model that support email instead of uname """
     email = models.EmailField(max_length=255, unique=True)
