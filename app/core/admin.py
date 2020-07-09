@@ -27,3 +27,4 @@ class UserAdmin(BaseUserAdmin):
 
 """ register custom model class for user admin """
 admin.site.register(models.User, UserAdmin)
+admin.site.register(models.Tag)
